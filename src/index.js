@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Provider from 'react-redux';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from "./store/configureStore";
+
+const store = configureStore();
 
 ReactDOM.render(
     // Provider component gives the App access to the redux store
     //TODO: redux store structure needs to be built
-  <Provider store={}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
